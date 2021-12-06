@@ -9,7 +9,7 @@ TARGETS = $(patsubst %.cc,%,$(SOURCE))    # 将源文件的.cc后缀名去掉
 
 CC = gcc
 CXX = g++
-CXXFLAGS += --std=c++11 -g -Iinclude -Isrc                # 这里可以添加头文件寻找的路径
+CXXFLAGS += --std=c++11 -g -Iinclude -Isrc -DNDEBUG              # 这里可以添加头文件寻找的路径
 LDFLAGS = -lpthread -lpmem2 -lgtest -libverbs       # 链接库，指定搜索路径 -rpath=. -L..
 # 关于依赖库，参考 https://blog.csdn.net/q1302182594/article/details/42102961/
 
